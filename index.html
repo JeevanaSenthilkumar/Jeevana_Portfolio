@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jeevana Senthilkumar – Digital Marketing Portfolio</title>
+  <meta name="description" content="Digital Marketing Specialist with 2 years of experience in SEO, PPC, Social Media, and Analytics. Case studies, results, and contact." />
+  <meta name="author" content="Jeevana Senthilkumar" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;          /* slate-900 */
+      --panel:#111827E6;     /* semi */
+      --text:#e5e7eb;        /* gray-200 */
+      --muted:#94a3b8;       /* slate-400 */
+      --brand:#22d3ee;       /* cyan-400 */
+      --brand-2:#a78bfa;     /* violet-400 */
+      --accent:#34d399;      /* emerald-400 */
+      --warn:#f59e0b;        /* amber-500 */
+      --card:#0b1224;        /* deeper */
+      --chip:#1f2937;        /* gray-800 */
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";background:radial-gradient(1200px 600px at 15% -10%, rgba(34,211,238,.18), transparent 60%), radial-gradient(1200px 600px at 85% 110%, rgba(167,139,250,.16), transparent 60%), var(--bg);color:var(--text);}
+    a{color:var(--brand)}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(15,23,42,.95), rgba(15,23,42,.80));backdrop-filter:saturate(130%) blur(8px);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
+    .brand .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(45deg,var(--brand),var(--brand-2));box-shadow:0 0 0 6px rgba(34,211,238,.12)}
+    .links a{margin:0 10px;text-decoration:none;color:var(--text);opacity:.9}
+    .links a:hover{opacity:1;color:#fff}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg, rgba(31,41,55,.8), rgba(17,24,39,.8));color:#fff;text-decoration:none;box-shadow:var(--shadow)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#0b0f1a;border:none}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:56px 0}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg, rgba(2,6,23,.7), rgba(2,6,23,.5));border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;color:var(--muted)}
+    .headline{font-size:40px;line-height:1.1;margin:12px 0 10px;font-weight:800}
+    .headline span{background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .sub{color:var(--muted);font-weight:500}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);padding:22px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+    .kpi{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px;text-align:center}
+    .kpi h3{margin:0;font-size:22px}
+    .section{padding:38px 0}
+    .section h2{font-size:26px;margin:0 0 16px}
+    .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 12;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .card-inner{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .card .media{background:linear-gradient(180deg, rgba(15,23,42,1), rgba(2,6,23,1));padding:18px}
+    .card .body{padding:20px}
+    .pill{display:inline-block;background:var(--chip);border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;color:#cbd5e1;font-size:13px}
+    .metrics{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 2px}
+    .metric{background:#041028;border:1px solid rgba(34,211,238,.25);color:#c2f7ff;border-radius:10px;padding:8px 10px;font-size:13px}
+    .bullets{color:var(--text);opacity:.95}
+    .bullets li{margin-bottom:8px}
+    .skills-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+    .skill{background:var(--card);border:1px solid rgba(255,255,255,.08);padding:10px 12px;border-radius:12px;text-align:center;font-weight:600}
+    .timeline{display:grid;grid-template-columns:1fr;gap:14px}
+    .item{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);padding:16px;border-radius:14px}
+    .contact{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+    .form{display:grid;gap:12px}
+    input, textarea{width:100%;background:#0a0f1f;border:1px solid rgba(255,255,255,.1);color:#fff;padding:12px 14px;border-radius:12px}
+    label{font-size:14px;color:var(--muted)}
+    footer{padding:30px 0;color:var(--muted);text-align:center}
+    /* responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .card-inner{grid-template-columns:1fr}
+      .skills-grid{grid-template-columns:repeat(3,1fr)}
+      .kpis{grid-template-columns:repeat(2,1fr)}
+      .contact{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><span class="dot"></span> Jeevana • Digital Marketer</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Case Studies</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn primary" href="#contact" aria-label="Hire Jeevana">Hire Me</a>
+    </div>
+  </nav>
+
+  <header class="container hero" id="about">
+    <div>
+      <span class="badge">Available for full-time • Chennai / Remote</span>
+      <h1 class="headline">Hi, I’m <span>Jeevana Senthilkumar</span> — Digital Marketing Specialist</h1>
+      <p class="sub">2 years in SEO, PPC and Social Media. I design data-driven campaigns that grow reach, lower cost-per-click, and convert. Strong with Google Ads, Meta Ads, LinkedIn, SEMrush, GA, SQL, Python and Power BI.</p>
+      <div style="display:flex;gap:12px;margin-top:16px;flex-wrap:wrap">
+        <a class="btn primary" href="#projects">View Case Studies</a>
+        <a class="btn" href="mailto:jeevana8438@gmail.com">Email Me</a>
+        <a class="btn" href="#resume" onclick="window.print()">Download as PDF</a>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><h3>+40%</h3><div class="sub">Engagement Uplift</div></div>
+        <div class="kpi"><h3>+15%</h3><div class="sub">Sales Growth</div></div>
+        <div class="kpi"><h3>-12%</h3><div class="sub">CPC Reduction</div></div>
+        <div class="kpi"><h3>2,500+</h3><div class="sub">LinkedIn Followers</div></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <strong>Highlights</strong>
+      <ul class="bullets">
+        <li>Ran Instagram PPC to a 15% higher conversion rate in month 1.</li>
+        <li>Scaled a new IG page to 1,200+ followers in 3 months with Canva creatives.</li>
+        <li>Influencer + affiliate playbook that lifted reach by 35%.</li>
+        <li>Built Power BI dashboards for campaign KPIs and decision-making.</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- PROJECTS -->
+  <section class="container section" id="projects">
+    <h2>Case Studies</h2>
+
+    <!-- LinkedIn Growth Strategy Project -->
+<article class="card" style="margin-top:18px">
+  <div class="card-inner">
+    <div class="media">
+      <div class="metrics">
+        <span class="metric">0 → 2,500+ followers</span>
+        <span class="metric">30% engagement rate</span>
+        <span class="metric">A/B tested formats & timing</span>
+      </div>
+      <img alt="LinkedIn Growth Screenshots" src="images/BestPost.jpg">
+      <img alt="LinkedIn Growth Screenshots" src="images/Post performance.jpg">
+    </div>
+    <div class="body">
+      <h3>LinkedIn Growth Strategy</h3>
+      <p class="sub"><strong>Objective:</strong> Build personal brand visibility and increase LinkedIn followers using SEO-led content and strategic hashtag optimization.</p>
+      <ul class="bullets">
+        <li><strong>Role / Action:</strong> Planned and executed weekly content calendar, optimized hooks, CTAs, and posting times. Used hashtag clusters and keyworded captions to rank for niche search terms. Engaged via DMs to convert profile visits to followers.</li>
+        <li><strong>Results & Insights:</strong> Grew LinkedIn followers from 0 → 2,500+ with 30% engagement rate. A/B tested content formats and posting schedules to identify top-performing strategies.</li>
+        <li><strong>Visualization:</strong> Added screenshots of top posts and engagement metrics to demonstrate growth visually.</li>
+      </ul>
+      <div>
+        <span class="pill">SEO Content</span>
+        <span class="pill">Hashtag Strategy</span>
+        <span class="pill">A/B Testing</span>
+        <span class="pill">Canva</span>
+        <span class="pill">LinkedIn Marketing</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+<!-- Google Ads Campaign Project -->
+<article class="card" style="margin-top:18px">
+  <div class="card-inner">
+    <div class="media">
+      <div class="metrics">
+        <span class="metric">Clicks: 350–420</span>
+        <span class="metric">CTR: 3.5%–3.6%</span>
+        <span class="metric">ROAS: 3.2x–3.8x</span>
+      </div>
+      <img alt="Google Ads Campaign Chart" src="images/google-ads-chart.jpg">
+    </div>
+    <div class="body">
+      <h3>Google Ads Campaign – Customized Mobile Cases</h3>
+      <p class="sub"><strong>Objective:</strong> Test and optimize ad creatives for a mobile case brand to increase conversions while lowering cost-per-click.</p>
+      <ul class="bullets">
+        <li><strong>Role / Action:</strong> Designed 2 ad variants using Canva, simulated campaign metrics in Excel, and calculated CTR, CPC, Conversions, and ROAS to evaluate performance.</li>
+        <li><strong>Results & Insights:</strong> Ad 2 outperformed Ad 1 with higher conversions, lower CPC, and better ROAS. Recommended scaling similar creative messaging for future campaigns.</li>
+        <li><strong>Visualization:</strong> Created a bar chart to compare clicks vs conversions for clear insights and decision-making.</li>
+      </ul>
+      <div>
+        <span class="pill">Google Ads</span>
+        <span class="pill">Excel</span>
+        <span class="pill">Canva</span>
+        <span class="pill">Campaign Analysis</span>
+        <span class="pill">Data Visualization</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+    <!-- Instagram Creative Project -->
+<article class="card" style="margin-top:18px">
+  <div class="card-inner">
+  <div class="media">
+    <div class="metrics">
+      <span class="metric">Creative Ad Designs</span>
+      <span class="metric">Experimented Meta Ads Setup</span>
+      <span class="metric">Explored Influencer Outreach</span>
+    </div>
+    <img alt="Instagram campaign placeholder" src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='640' height='360'><rect width='100%' height='100%' fill='%230b1224'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8' font-family='Inter' font-size='18'>Add your Instagram creative screenshots here</text></svg>">
+  </div>
+
+    <div class="body">
+      <h3>Instagram Creative Campaign – Customized Mobile Cases</h3>
+      <p class="sub">Designed and launched creatives for an Instagram business page using Canva. 
+      Explored Meta Ads setup and learned how to target audiences and optimize creatives.</p>
+      <ul class="bullets">
+        <li>Created 5+ unique Canva ad/post designs (stories, reels, feed).</li>
+        <li>Set up Instagram business page and experimented with Meta Ads platform.</li>
+        <li>Explored influencer outreach opportunities to increase reach.</li>
+      </ul>
+      <div>
+        <span class="pill">Canva</span>
+        <span class="pill">Instagram Business</span>
+        <span class="pill">Meta Ads Setup</span>
+        <span class="pill">Creative Design</span>
+      </div>
+    </div>
+  </div>
+</article>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="container section" id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="item">
+        <strong>Amazon – Machine Learning Data Associate (2024 – Present)</strong>
+        <ul class="bullets">
+          <li>Supported <strong>marketing and customer experience projects</strong> by improving chatbot engagement (+10%) and accuracy (+15%).</li>
+          <li>Contributed to <strong>ad targeting improvements</strong> through data quality checks across 20+ workflows, helping campaigns reach the right audience.</li>
+          <li>Collaborated with marketing teams to <strong>analyze campaign data</strong> and provide actionable insights for performance optimization.</li>
+          <li>Built dashboards to <strong>track engagement and campaign results</strong>, enabling quicker decisions for marketers.</li>
+          <li>Helped streamline campaign processes, leading to <strong>15% more efficient execution</strong>.</li>
+</ul>
+<p><em>Key Highlights:</em></p>
+<ul class="bullets">
+<li>Increased ad targeting efficiency and reduced errors that impacted customer experience.</li>
+<li>Improved how customers discovered products online, boosting conversions.</li>
+<li>Actively supported cross-functional teams in <strong>marketing analytics and campaign optimization</strong>.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <strong>Adecco (Amazon) – ML Data Associate</strong>
+        <ul class="bullets">
+          <li>Image-to-context annotation reduced product categorization errors by 15%.</li>
+          <li>Boosted recommendation accuracy and customer navigation quality.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="container section" id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="skills-grid" aria-label="skills">
+      <div class="skill">SEO (On/Off-page)</div>
+      <div class="skill">SEM & PPC</div>
+      <div class="skill">Google Ads</div>
+      <div class="skill">Meta / IG Ads</div>
+      <div class="skill">LinkedIn Ads</div>
+      <div class="skill">SEMrush</div>
+      <div class="skill">Google Analytics</div>
+      <div class="skill">Keyword Research</div>
+      <div class="skill">Content Optimization</div>
+      <div class="skill">A/B Testing</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Excel / SQL / Python</div>
+      <div class="skill">WordPress</div>
+      <div class="skill">Mailchimp</div>
+      <div class="skill">HubSpot</div>
+      <div class="skill">Canva</div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTS -->
+  <section class="container section" id="resume">
+    <h2>Education & Certifications</h2>
+    <div class="timeline">
+      <div class="item">
+        <strong>B.Sc. Data Science – 9.2 CGPA (Rank Holder)</strong>
+        <div class="sub">2020 – 2023 • Madurai</div>
+      </div>
+      <div class="item">
+        <strong>Certifications</strong>
+        <ul class="bullets">
+          <li>Google Digital Garage – Fundamentals of Digital Marketing</li>
+          <li>Facebook Blueprint – Digital Marketing Associate</li>
+          <li>HubSpot – Inbound Marketing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="container section" id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div class="item">
+        <p class="sub">Let’s build campaigns that actually move metrics. I’m open to Digital Marketing / Growth roles in Chennai or Remote.</p>
+        <p><strong>Email:</strong> <a href="mailto:jeevana8438@gmail.com">jeevana8438@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919865279866">+91 98652 79866</a></p>
+        <p><strong>Location:</strong> Chennai, India</p>
+        <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap">
+          <a class="btn" href="mailto:jeevana8438@gmail.com">Hire via Email</a>
+          <a class="btn" href="#" onclick="copyEmail(event)">Copy Email</a>
+        </div>
+      </div>
+      <form class="form" action="mailto:jeevana8438@gmail.com" method="post" enctype="text/plain">
+        <div>
+          <label for="name">Your Name</label>
+          <input id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="email">Your Email</label>
+          <input id="email" name="email" type="email" placeholder="you@company.com" required>
+        </div>
+        <div>
+          <label for="msg">Message</label>
+          <textarea id="msg" name="message" rows="4" placeholder="Tell me about your project"></textarea>
+        </div>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="y"></span> Jeevana Senthilkumar • Built with ❤️, data, and coffee.
+  </footer>
+
+  <script>
+    // smooth internal scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){e.preventDefault();document.querySelector(id).scrollIntoView({behavior:'smooth'});}
+      })
+    })
+    // copy email helper
+    function copyEmail(e){
+      e.preventDefault();
+      navigator.clipboard.writeText('jeevana8438@gmail.com').then(()=>{
+        const btn=e.target.closest('.btn');
+        const old=btn.textContent;btn.textContent='Copied!';
+        setTimeout(()=>btn.textContent=old,1200)
+      })
+    }
+    // year
+    document.getElementById('y').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
